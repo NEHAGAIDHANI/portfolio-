@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Neha Gaidhani | Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(-45deg, #667eea, #764ba2, #243b55, #141e30);
+            --accent: #764ba2;
+            --glow-color: rgba(118, 75, 162, 0.6);
+        }
+        
+        body { font-family: 'Merriweather Sans', sans-serif; scroll-behavior: smooth; background-color: #fcfcfc; overflow-x: hidden; }
+
+        /* --- HEROIC ANIMATED HEADER --- */
+        .masthead {
+            background: var(--primary-gradient) !important;
+            background-size: 400% 400% !important;
+            animation: gradientMove 15s ease infinite;
+            padding-top: 10rem;
+            padding-bottom: 8rem;
+            color: white;
+            clip-path: ellipse(160% 100% at 50% 0%);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* --- GLOW EFFECT FOR PROFILE PHOTO --- */
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 6px solid rgba(255, 255, 255, 0.3);
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+        }
+
+        .profile-img:hover { 
+            transform: scale(1.1) rotate(3deg); 
+            box-shadow: 0 0 35px var(--glow-color);
+            border-color: white;
+        }
+
+        /* --- HERO SOCIAL LINKS --- */
+        .hero-socials a {
+            color: white;
+            font-size: 2rem;
+            margin: 0 15px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .hero-socials a:hover {
+            transform: translateY(-5px);
+            filter: drop-shadow(0 0 10px white);
+        }
+
+        /* Navigation */
+        #mainNav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .page-section { padding: 8rem 0; }
+        .divider { max-width: 3.5rem; border-width: 0.25rem; border-color: var(--accent); margin: 1.5rem auto; opacity: 1; }
+        .divider-light { border-color: #fff; }
+
+        .exp-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            border-left: 6px solid var(--accent);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+            transition: 0.3s;
+        }
+        .exp-card:hover { 
+            transform: translateX(10px); 
+            box-shadow: 0 10px 30px var(--glow-color);
+        }
+        
+        .table-container {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+        }
+
+        .project-card {
+            padding: 2rem;
+            border-radius: 20px;
+            background: white;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            height: 100%;
+        }
+        .project-card:hover {
+            box-shadow: 0 15px 40px var(--glow-color);
+            transform: translateY(-10px);
+            border-color: var(--accent);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            box-shadow: 0 10px 20px rgba(118, 75, 162, 0.2);
+            transition: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .masthead { clip-path: none; padding-top: 8rem; }
+            .display-4 { font-size: 2.5rem; }
+        }
+
+        /* Typewriter Cursor Style */
+        .typed-cursor {
+            color: white;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body id="page-top">
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand fw-bold" href="#page-top">NEHA.G</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="masthead text-center" id="home">
+        <div class="container px-4 px-lg-5">
+            <img src="5872.jpg" class="profile-img" alt="Neha Gaidhani Profile Photo" onerror="this.src='https://ui-avatars.com/api/?name=Neha+G&background=764ba2&color=fff'">
+            
+            <h1 class="display-4 fw-bold">Neha Gaidhani</h1>
+
+            <div class="hero-socials mb-4">
+                <a href="https://github.com/NEHAGAIDHANI" target="_blank"><i class="bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/neha-gaidhani-a704b3253" target="_blank"><i class="bi-linkedin"></i></a>
+                <a href="mailto:hello.nehagaidhani@gmail.com"><i class="bi-envelope"></i></a>
+            </div>
+
+            <hr class="divider divider-light" />
+            
+            <div class="mb-5 fs-4 fw-light text-white-75" style="min-height: 4.5rem;">
+                <span id="typed"></span>
+            </div>
+            
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a class="btn btn-light btn-xl fw-bold shadow" href="#projects">View My Projects</a>
+                <a class="btn btn-outline-light btn-xl fw-bold" href="resume.pdf" download>Download Resume</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-section bg-light" id="about">
+        <div class="container px-4 px-lg-5 text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="mt-0">About Me</h2>
+                    <hr class="divider" />
+                    <p class="text-muted mb-4 fs-5">
+                        I am a passionate Computer Science Engineering student currently in my third year, driven by a deep interest in Data Analytics and Artificial Intelligence. With a strong foundation in core programming languages like C, C++, Java, and Python, I enjoy solving complex problems and building efficient software solutions.
+                    </p>
+                    <p class="text-muted mb-0 fs-5">
+                        My journey in tech is fueled by curiosity and a desire to explore the latest advancements in Software Engineering. I am constantly learning, whether it's through hands-on projects, internships, or simulations, aiming to bridge the gap between theoretical knowledge and real-world application.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section" id="experience">
+        <div class="container px-4 px-lg-5">
+            <h2 class="text-center mt-0">Experience</h2>
+            <hr class="divider" />
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-10">
+                    <div class="exp-card reveal">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap">
+                            <h4 class="fw-bold mb-1">Gen AI Powered Data-Analytics Job Simulation On Forage.</h4>
+                            <span class="exp-date">NOV 2025</span>
+                        </div>
+                        <p class="text-muted">Interactive simulation focused on AI-driven data insights.</p>
+                    </div>
+
+                    <div class="exp-card reveal">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap">
+                            <h4 class="fw-bold mb-1">Training Internship at AILEELA </h4>
+                            <span class="exp-date">JAN 2026 present</span>
+                        </div>
+                        <p class="text-muted">Working on Software Engineering fundamentals and AI integration.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section bg-light" id="education">
+        <div class="container px-4 px-lg-5">
+            <h2 class="text-center mt-0">Academic Background</h2>
+            <hr class="divider" />
+            <div class="table-container mt-5 reveal">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Qualification</th>
+                                <th>Institution</th>
+                                <th>Year</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="fw-bold">B.E. Computer Engineering</td>
+                                <td>GESCOE [SPPU]</td>
+                                <td>2023 - 2027</td>
+                                <td class="text-success fw-bold">Pursuing</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold">HSC (Class XII)</td>
+                                <td>Aarambha Mahavidyalaya,Nashik-Road</td>
+                                <td>2022</td>
+                                <td>61.67%</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold">SSC (Class X)</td>
+                                <td>Sant Aai-Saheb Maharaj English School,Palse</td>
+                                <td>2020</td>
+                                <td>85.21%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section" id="skills">
+        <div class="container px-4 px-lg-5 text-center">
+            <h2 class="mt-0">Technical Expertise</h2>
+            <hr class="divider" />
+            <div class="row g-4 mt-4">
+                <div class="col-md-4 reveal">
+                    <div class="project-card">
+                        <i class="bi-laptop fs-1 text-primary mb-3"></i>
+                        <h5>Languages</h5>
+                        <p class="text-muted small">C, C++, Java, Python</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal">
+                    <div class="project-card">
+                        <i class="bi-code-slash fs-1 text-primary mb-3"></i>
+                        <h5>Frontend</h5>
+                        <p class="text-muted small">HTML5, CSS3, Bootstrap 5</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal">
+                    <div class="project-card">
+                        <i class="bi-server fs-1 text-primary mb-3"></i>
+                        <h5>Backend</h5>
+                        <p class="text-muted small">MySQL, MongoDB, File Handling</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section bg-light" id="projects">
+        <div class="container px-4 px-lg-5">
+            <h2 class="text-center mt-0">Recent Projects</h2>
+            <hr class="divider" />
+            <div class="row g-4 mt-4">
+                <div class="col-lg-6 reveal">
+                    <div class="project-card shadow-sm">
+                        <span class="badge bg-primary mb-2">AI & Web</span>
+                        <h5>AI ChatBot</h5>
+                        <p class="text-muted small">Conversational interface built with Gemini API integration.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal">
+                    <div class="project-card shadow-sm">
+                        <span class="badge bg-dark mb-2">Java</span>
+                        <h5>Smart Text Editor</h5>
+                        <p class="text-muted small">Desktop application using Java Swing for processing and formatting text.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal">
+                    <div class="project-card shadow-sm">
+                        <span class="badge bg-info mb-2">System</span>
+                        <h5>Hotel Management System</h5>
+                        <p class="text-muted small">Automated system for room booking and customer data management.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal">
+                    <div class="project-card shadow-sm">
+                        <span class="badge bg-secondary mb-2">UI/UX</span>
+                        <h5>Responsive Portfolio</h5>
+                        <p class="text-muted small">High-performance portfolio built with Bootstrap 5.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section" id="contact">
+        <div class="container px-4 px-lg-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8 text-center">
+                    <h2 class="mt-0">Get In Touch</h2>
+                    <hr class="divider" />
+                    <p class="text-muted mb-5">Have a question? Send me a message!</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-7">
+                    <div class="table-container p-4 p-md-5 border-0 shadow-sm reveal">
+                        <form id="contactForm">
+                            <div class="form-floating mb-3">
+                                <input class="form-control border-0 bg-light" id="name" type="text" placeholder="Name" required />
+                                <label for="name">Full Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input class="form-control border-0 bg-light" id="email" type="email" placeholder="Email" required />
+                                <label for="email">Email Address</label>
+                            </div>
+                            <div class="form-floating mb-4">
+                                <textarea class="form-control border-0 bg-light" id="message" placeholder="Message" style="height: 12rem" required></textarea>
+                                <label for="message">Your Message</label>
+                            </div>
+                            <div class="d-grid">
+                                <button class="btn btn-primary btn-xl fw-bold py-3 shadow-sm" type="submit">
+                                    <i class="bi-send-fill me-2"></i>Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark py-5">
+        <div class="container text-center text-white-50">
+            <p class="small mb-0">Copyright &copy; 2026 - Neha Gaidhani</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        // Typewriter Effect
+        var typed = new Typed('#typed', {
+            strings: [
+                "Third-year CS Engineering Student.",
+                " AI Enthusiast.",
+                "Tech Enthusiast.",
+                "Experienced in C, C++, Python, Java.",
+                "Exploring the intersection of AI and Software Engineering"
+            ],
+            typeSpeed: 50,
+            backSpeed: 30,
+            backDelay: 2000,
+            loop: true
+        });
+
+        // Scroll Reveal
+        ScrollReveal().reveal('.reveal', { 
+            delay: 200, 
+            distance: '60px', 
+            origin: 'bottom', 
+            duration: 1000,
+            interval: 200 
+        });
+    </script>
+</body>
+</html>
